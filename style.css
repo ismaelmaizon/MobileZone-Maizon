@@ -68,16 +68,39 @@ ul {
 }
 
 
-
-/*cuerpo*/
-
+/*Cuerpo del index*/
 
 
-.courses {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*cuerpo Productos*/
+
+
+
+.product {
     margin-top: 30px;
 }
 
-.courses__grid {
+.product__grid {
 
     display: grid;
 
@@ -87,7 +110,7 @@ ul {
 
 }  
 
-.courses__title {
+.product__title {
     margin-bottom: 20px;
     text-align: center;
     color: #fff;
