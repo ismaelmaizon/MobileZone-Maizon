@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    /*font-family: 'Lato', sans-serif;*/
+    /*font-family: 'Roboto Condensed', sans-serif;*/
+    background-color: rgb(87, 203, 238);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+/*contenido centrado*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+
+
+/*Navegador*/
+
+
+
+.header__nav {
+    background-image: linear-gradient(45deg, #5a5df0, #282abb);
+    color: #fff;
+    padding: 25px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nav__title {
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+}
+
+
+.nav__title-list li {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: inline-block;
+    padding: 0 20px;
+    margin-top: 25px;
+}
+
+
+.nav__title-list li a {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+
+/*cuerpo*/
+
+
+
+.courses {
+    margin-top: 30px;
+}
+
+.courses__grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap:  50px;
+
+}  
+
+.courses__title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+
+}
+
+
+
+
+ /*articulo*/
+.card {
+    background-color: #fff;
+    padding: 20px;
+    /*width: 400px;   debemos sacar la medida absoluta de las tajetas para que estas se puedan acomodar al contenido*/ 
+    border-radius: 20px;
+    box-shadow: 0 25px 50px 12px rgba(0,0,5); /*incertar sombra acepta 5 valores "sombra X", "sombra Y" , difuminacion, ancho de la sombra, color*/
+}
+
+/*imagenes del articulo*/
+.slider {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 400px;
+}
+
+
+.slider li {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    opacity: 0;
+} 
+
+.slider li img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slider li:first-child {
+    opacity: 1;
+}
+
+.slider li:target {
+    opacity: 1;
+}
+
+/*menu de imagenes*/
+
+.menu {
+    text-align: center;
+    margin: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background-color: #282abb;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+
+.card__title{
+    margin-bottom: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+.card__link {
+    background-color: #22c55e;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+
+}
+
