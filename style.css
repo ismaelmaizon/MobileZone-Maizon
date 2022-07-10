@@ -61,6 +61,13 @@ ul {
     margin-top: 25px;
 }
 
+@media (max-width: 1308px) {
+
+    .nav__title-list {
+        display: none;
+    }
+    
+}
 
 .nav__title-list li a {
     color: #fff;
@@ -109,21 +116,6 @@ ul {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*cuerpo Productos*/
 
 
@@ -142,6 +134,20 @@ ul {
 
 }  
 
+@media (max-width: 1100px) {
+
+    .product__grid {
+
+        display: grid;
+    
+        grid-template-columns: repeat(1, 1fr);
+    
+        gap:  50px;
+    
+    }  
+    
+}
+
 .product__title {
     margin-bottom: 20px;
     text-align: center;
@@ -153,6 +159,7 @@ ul {
 
 
  /*articulo*/
+
 .card {
     background-color: #fff;
     padding: 20px;
@@ -161,27 +168,35 @@ ul {
     box-shadow: 0 25px 50px 12px rgba(0,0,5); /*incertar sombra acepta 5 valores "sombra X", "sombra Y" , difuminacion, ancho de la sombra, color*/
 }
 
+.card__header {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
 /*imagenes del articulo*/
 .slider {
     display: flex;
     position: relative;
-    width: 200px;
     height: 400px;
 }
 
 
 .slider li {
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
-    top: 0;
     left: 100px;
     opacity: 0;
 } 
 
-.slider li img {
+.card__header ul li img {
     width: 300px;
     height: 400px;
-    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
+
 
 .slider li:first-child {
     opacity: 1;
@@ -215,6 +230,7 @@ ul {
     border-radius: 100%;
 }
 
+/*link y nombre*/
 
 .card__title{
     margin-bottom: 20px;
