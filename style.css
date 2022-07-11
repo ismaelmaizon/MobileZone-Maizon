@@ -171,7 +171,7 @@ ul {
 .card__header {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    position: relative; 
 }
 
 /*imagenes del articulo*/
@@ -186,13 +186,12 @@ ul {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    left: 100px;
+    justify-content: center;
     opacity: 0;
 } 
 
 .card__header ul li img {
-    width: 300px;
-    height: 400px;
+    width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
 }
