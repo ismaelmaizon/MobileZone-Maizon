@@ -1,0 +1,22 @@
+{
+  "name": "mobilezonemaizon",
+  "version": "1.0.0",
+  "description": "agregando sass a mi proyecto",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --include-path sass ./sass/index.scss ./css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismaelmaizon/proyecto-final-Maizon.git"
+  },
+  "author": "ismael maizon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ismaelmaizon/proyecto-final-Maizon/issues"
+  },
+  "homepage": "https://github.com/ismaelmaizon/proyecto-final-Maizon#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
