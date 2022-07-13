@@ -1,6 +1,6 @@
 .header__nav {
     background-image: linear-gradient(45deg, #5a5df0, #282abb);
-    color: #fff;
+    color: $blanco;
     padding: 25px 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -22,7 +22,7 @@
             margin-top: 25px;
 
             a {
-                color: #fff;
+                color: $blanco;
                 font-size: 20px;
                 transition: all 0.3s;
 
