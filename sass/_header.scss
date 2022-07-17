@@ -1,37 +1,10 @@
-.header__nav {
+
+
+.header {
     background-image: linear-gradient(45deg, #5a5df0, #282abb);
-    color: $blanco;
-    padding: 25px 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-
-
-.nav__title {
-    font-family: 'Lato', sans-serif;
-    font-size: 50px;
-
-    &-list {
-
-        li {
-            
-            font-family: 'Roboto Condensed', sans-serif;
-            display: inline-block;
-            padding: 0 20px;
-            margin-top: 25px;
-
-            a {
-                color: $blanco;
-                font-size: 20px;
-                transition: all 0.3s;
-
-                &:hover {
-                    transform: translateY(10px);
-                    font-weight: bold;
-                }
-            }
-        }
-
-    }
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
