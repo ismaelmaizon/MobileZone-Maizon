@@ -8,3 +8,32 @@
     left: 0;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav__menu {
+    display: flex;
+    margin-right: 40px;
+}
+
+
+.nav__menu-item {
+    font-size: 18px;
+    margin: 0 15px;
+    line-height: 80px;
+}
+
