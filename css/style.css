@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -22,28 +23,87 @@ ul {
   max-width: 1200px;
   margin: 0 auto; }
 
-.header__nav {
+.header {
   background-image: linear-gradient(45deg, #5a5df0, #282abb);
-  color: #fff;
-  padding: 25px 30px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
 
-.nav__title {
-  font-family: 'Lato', sans-serif;
-  font-size: 50px; }
-  .nav__title-list li {
-    font-family: 'Roboto Condensed', sans-serif;
-    display: inline-block;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; }
+
+.nav-link {
+  color: #fff;
+  text-decoration: none; }
+
+.logo {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px; }
+
+.nav__menu {
+  display: flex;
+  margin-right: 40px; }
+
+.nav__menu-item {
+  font-size: 18px;
+  margin: 0 5px;
+  line-height: 80px;
+  width: max-content; }
+
+.nav__menu-link:hover {
+  color: #fff;
+  font-weight: bold;
+  transform: translateZ(5px); }
+
+.nav__toggle {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 35px;
+  padding: 0 20px;
+  line-height: 60px;
+  display: none; }
+
+/*Media*/
+@media (max-width: 768px) {
+  .header {
+    height: 60px; }
+  .logo {
+    font-size: 25px;
     padding: 0 20px;
-    margin-top: 25px; }
-    .nav__title-list li a {
-      color: #fff;
-      font-size: 20px;
-      transition: all 0.3s; }
-      .nav__title-list li a:hover {
-        transform: translateY(10px);
-        font-weight: bold; }
+    line-height: 60px; }
+  .nav__menu {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    background-color: #5a5df088;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+    /*se agrega scrool para posible pantalla de largo insuficiente al menú */
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    /*el menu queda 100% a la derecha*/
+    left: 100%;
+    transition: left 0.3s; }
+  .nav__menu-item {
+    line-height: 70px; }
+  .nav__menu-link:hover {
+    color: #fff;
+    font-weight: bold;
+    transform: translateZ(5px); }
+  .nav__toggle {
+    display: block; }
+  .nav__menu-visible {
+    left: 0; } }
 
 /*Cuerpo del index*/
 .courses {
