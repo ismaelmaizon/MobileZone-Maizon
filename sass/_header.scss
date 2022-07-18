@@ -92,6 +92,10 @@
         height: calc(100% - 60px);
         overflow-y: auto;
 
+        /*el menu queda 100% a la derecha*/
+        left: 100%;
+        transition: left 0.3s;
+
     }
     
     
@@ -112,7 +116,8 @@
     }
     
 
-
-
+    .nav__menu-visible {
+        left: 0;
+    }
 
 }

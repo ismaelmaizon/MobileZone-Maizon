@@ -90,7 +90,10 @@ ul {
     padding: 20px 0;
     /*se agrega scrool para posible pantalla de largo insuficiente al menú */
     height: calc(100% - 60px);
-    overflow-y: auto; }
+    overflow-y: auto;
+    /*el menu queda 100% a la derecha*/
+    left: 100%;
+    transition: left 0.3s; }
   .nav__menu-item {
     line-height: 70px; }
   .nav__menu-link:hover {
@@ -98,7 +101,9 @@ ul {
     font-weight: bold;
     transform: translateZ(5px); }
   .nav__toggle {
-    display: block; } }
+    display: block; }
+  .nav__menu-visible {
+    left: 0; } }
 
 /*Cuerpo del index*/
 .courses {
