@@ -153,16 +153,31 @@ ul {
   padding: 50px 20px;
   color: #e2e8fe;
   border-radius: 15px;
-  box-shadow: 0 25px 50px 12px #000 .tarjeta; }
-  .tarjeta :hover {
-    background-image: linear-gradient(45deg, #e2e8fe, #900);
-    color: #222; }
+  box-shadow: 0 25px 50px 12px #000;
+  transition: all 0.3s; }
+  .tarjeta:hover {
+    background-image: linear-gradient(45deg, #57cbee, #57cbee); }
   .tarjeta__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
-    align-items: center; }
+    align-content: center;
+    justify-items: center; }
+    .tarjeta__grid a {
+      font-size: 75px;
+      color: #000; }
+    .tarjeta__grid img {
+      width: 25%; }
   .tarjeta__grid-content h1 {
     color: #fff;
     font-size: 50px;
     margin-bottom: 20px; }
+
+@media (max-width: 768px) {
+  .tarjeta__grid {
+    grid-template-columns: 1fr; }
+    .tarjeta__grid img {
+      display: block; }
+    .tarjeta__grid a {
+      font-size: 35px;
+      color: #000; } }
