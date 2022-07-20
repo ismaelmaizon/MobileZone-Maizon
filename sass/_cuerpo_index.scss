@@ -1,31 +1,35 @@
 /*Cuerpo del index*/
 
-.courses {
-    font-family: 'Lato', sans-serif;
+.tarjeta {
+    margin-top: 100px;
     background-image: linear-gradient(45deg, #5a5df0, #282abb);
-    color: $blanco;
-    display: inline-block;
-    margin-left: 300px;
-    width: 100%;
-    height: 300px;
-    position: relative;
-    top: 20px;
-    transition: all 0.5s;
-    font-size: xx-large;
+    padding: 50px 20px;
+    color: #e2e8fe;
     border-radius: 15px;
     box-shadow: 0 25px 50px 12px #000;
+    transition: all 03.s;
 
     &:hover {
-        background-image: linear-gradient(45deg, rgb(87, 203, 238), rgb(87, 203, 238));
-        color: rgb(63, 26, 105);
+        background-image: linear-gradient(45deg, #e2e8fe, #900);
+        color: #000;
     }
 
-    &__title {
-        position: absolute;
-        top: 125px;
-        left: 250px;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        align-items: center;
     }
+
+    &__grid-content h1 {
+        color: #fff;
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
     
 }
+
+
 
 

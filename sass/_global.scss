@@ -11,6 +11,14 @@ body {
     background-color: rgb(87, 203, 238);
 }
 
+header {
+    z-index: 2;
+}
+
+main {
+    margin-top: 150px;
+    z-index: 1;
+}
 
 a {
     text-decoration: none;
