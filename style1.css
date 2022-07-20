@@ -109,68 +109,6 @@ ul {
 
 
 
-/*cuerpo Productos*/
-
-
-
-.product {
-    margin-top: 30px;
-}
-
-.product__grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap:  50px;
-
-}  
-
-
-.product__title {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #fff;
-
-}
-
-
-
-
- /*articulo*/
-
-.card {
-    background-color: #fff;
-    padding: 20px;
-    /*width: 400px;   debemos sacar la medida absoluta de las tajetas para que estas se puedan acomodar al contenido*/ 
-    border-radius: 20px;
-    box-shadow: 0 25px 50px 12px rgba(0,0,5); /*incertar sombra acepta 5 valores "sombra X", "sombra Y" , difuminacion, ancho de la sombra, color*/
-}
-
-
-
-
-
-
-/*link y nombre*/
-
-.card__title{
-    margin-bottom: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
-    
-}
-.card__link {
-    background-color: #22c55e;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #fff;
-    width: 100%;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-
-}
 
 
 
