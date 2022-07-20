@@ -186,6 +186,7 @@ ul {
   width: max-content; }
 
 .nav__menu-link:hover {
+  font-size: 22px;
   color: #fff;
   font-weight: bold;
   transform: translateZ(5px); }
