@@ -8,7 +8,7 @@
     color: #fff; }
   .product__contenedor {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: repeat(2, 70% 30%);
     gap: 30px; }
   .product__contenedor-celulares {
     width: 100%;
@@ -16,10 +16,16 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px; }
   .product__banner {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     margin-top: 20px;
     border-radius: 20px; }
+    .product__banner .imagen {
+      height: 500px;
+      width: 500px;
+      position: fixed;
+      z-index: -1; }
     .product__banner h3 {
       margin-left: 20px; }
 
@@ -27,7 +33,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   background-color: #fff;
   padding: 20px;
@@ -37,7 +43,7 @@
   /*incertar sombra acepta 5 valores "sombra X", "sombra Y" , difuminacion, ancho de la sombra, color*/
   /*link y nombre*/ }
   .card__title {
-    margin-bottom: 20px;
+    margin: 20px 0;
     font-family: 'Roboto Condensed', sans-serif; }
   .card__link {
     background-color: #22c55e;
@@ -49,6 +55,18 @@
     padding: 15px;
     text-align: center; }
 
+@media (max-width: 768px) {
+  .product__contenedor {
+    grid-template-columns: repeat(1, 1fr); }
+  .product__contenedor-celulares {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center; }
+  .product__banner {
+    display: none; }
+  .card {
+    width: 80%;
+    margin-left: 30px; } }
+
 .caja__venta {
   margin-top: 100px;
   background-image: linear-gradient(45deg, #5a5df0, #282abb);
@@ -58,10 +76,104 @@
   box-shadow: 0 25px 50px 12px #000;
   transition: all 0.3s;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
-  .caja__venta__venta-img img {
-    width: 15%;
-    height: 100%; }
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center; }
+  .caja__venta-input {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between; }
+    .caja__venta-input button {
+      width: 100%;
+      background-color: #002575;
+      border-radius: 4px;
+      margin-top: 20px;
+      box-shadow: 0 5px 5px 5px #000;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 3ms; }
+    .caja__venta-input button:hover {
+      transform: translateY(5px); }
+  .caja__venta-img {
+    display: flex;
+    flex-direction: column; }
+    .caja__venta-img img {
+      border-radius: 15px;
+      margin: 15px 0; }
+
+@media (max-width: 768px) {
+  .caja__venta {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    gap: 50px; }
+    .caja__venta-input {
+      display: flex;
+      flex-direction: column;
+      align-items: space-between; }
+      .caja__venta-input .inputs {
+        width: 400px; }
+      .caja__venta-input button {
+        width: 400px;
+        background-color: #002575;
+        border-radius: 4px;
+        margin-top: 20px;
+        box-shadow: 0 5px 5px 5px #000;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 3ms; }
+      .caja__venta-input button:hover {
+        transform: translateY(5px); }
+    .caja__venta-img {
+      display: flex;
+      flex-direction: column; }
+      .caja__venta-img img {
+        width: 400px;
+        height: 400px;
+        border-radius: 15px;
+        margin: 15px 0; } }
+
+@media (max-width: 400px) {
+  .caja__venta {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    gap: 50px; }
+    .caja__venta-input {
+      display: flex;
+      flex-direction: column;
+      align-items: space-between; }
+      .caja__venta-input .inputs {
+        width: 200px; }
+      .caja__venta-input button {
+        width: 200px;
+        background-color: #002575;
+        border-radius: 4px;
+        margin-top: 20px;
+        box-shadow: 0 5px 5px 5px #000;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 3ms; }
+      .caja__venta-input button:hover {
+        transform: translateY(5px); }
+    .caja__venta-img {
+      display: flex;
+      flex-direction: column; }
+      .caja__venta-img img {
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+        margin: 15px 0; } }
 
 footer {
   bottom: 0;
@@ -96,24 +208,24 @@ footer {
 .footer-content-container {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column; }
-
-.footer-info, .menu-item-footer {
-  margin: 0.2px 0;
-  opacity: 0.7;
-  color: #fff;
-  text-decoration: none;
-  transition: 0.5s; }
-
-.menu-item-footer:hover {
-  opacity: 1; }
-
-.menu-title {
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 2px; }
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; }
+  .footer-content-container .footer-info {
+    margin: 0.2px 0;
+    opacity: 0.7;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s; }
+  .footer-content-container a {
+    color: #fff; }
+  .footer-content-container .menu-title {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2px; }
 
 .social-container {
   display: flex;
@@ -156,7 +268,8 @@ a {
   box-shadow: 0 25px 50px 12px #000;
   transition: all 0.3s; }
   .maps:hover {
-    background-image: linear-gradient(45deg, #57cbee, #57cbee); }
+    background-image: linear-gradient(45deg, #57cbee, #57cbee);
+    color: #000; }
   .maps__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -190,6 +303,13 @@ a {
     gap: 50px; }
   .maps__grid {
     grid-template-columns: 1fr; } }
+
+@media (max-width: 400px) {
+  .maps__grid {
+    grid-template-columns: 1fr; }
+    .maps__grid .googlemaps {
+      width: 200px;
+      height: 200px; } }
 
 * {
   margin: 0;
