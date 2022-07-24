@@ -11,27 +11,64 @@
     }
     
 
-    &__grid {
+    &__contenedor {
 
+
+        //Grid
         display: grid;
+        grid-template-columns: 70% 30%;
+        gap: 30px;
+
+        //flexbox
+        // display: flex;
+        // gap: 10px;
     
+    
+    } 
+
+    &__contenedor-celulares {
+
+        //grid
+        width: 100%;
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
-    
-        gap:  50px;
-    
-    }  
+        gap: 20px;
+
+        //flexbox
+        // width: 60%;
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 40px;
+    }
+
+    &__banner {
+
+        width: 500px;
+        height: 500px;
+        margin-top: 20px;
+        border-radius: 20px;
+
+        h3 {
+            margin-left: 20px;
+        }
+
+    }
 }
 
 
  /*articulo*/
 
 .card {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
     background-color: #fff;
     padding: 20px;
     /*width: 400px;   debemos sacar la medida absoluta de las tajetas para que estas se puedan acomodar al contenido*/ 
     border-radius: 20px;
     box-shadow: 0 25px 50px 12px #000; /*incertar sombra acepta 5 valores "sombra X", "sombra Y" , difuminacion, ancho de la sombra, color*/
-
     /*link y nombre*/
 
     &__title{

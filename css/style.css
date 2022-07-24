@@ -6,13 +6,29 @@
     margin-bottom: 80px;
     text-align: center;
     color: #fff; }
-  .product__grid {
+  .product__contenedor {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 30px; }
+  .product__contenedor-celulares {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px; }
+    gap: 20px; }
+  .product__banner {
+    width: 500px;
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 20px; }
+    .product__banner h3 {
+      margin-left: 20px; }
 
 /*articulo*/
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
   background-color: #fff;
   padding: 20px;
   /*width: 400px;   debemos sacar la medida absoluta de las tajetas para que estas se puedan acomodar al contenido*/
