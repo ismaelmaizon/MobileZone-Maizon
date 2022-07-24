@@ -1,0 +1,18 @@
+
+
+
+.caja__venta {
+
+    @include transform;
+
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+    &__venta-img {
+        img {
+            width: 15%;
+            height: 100%;
+        }
+    }
+}
