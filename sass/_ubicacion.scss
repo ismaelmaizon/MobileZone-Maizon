@@ -1,0 +1,96 @@
+/*cuerpo Ubucacion*/
+
+
+
+.maps {
+
+    @include transform;
+    
+    &:hover {
+        background-image: linear-gradient(45deg, rgb(87, 203, 238), rgb(87, 203, 238));
+        color: #000;
+    }
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        align-items: center;
+    }
+
+    &__grid-content {
+
+        h1{
+            color: #fff;
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        a {
+            background-color: #0f172a;
+            color: #e2e8fe;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #952;
+            }
+        }
+    }
+
+
+
+}
+
+
+
+/*Media*/
+
+
+
+@media (max-width: 1308px) {
+
+    .nav__title-list {
+        display: none;
+    }
+    
+}
+
+
+@media (max-width: 1100px) {
+
+    .product__grid {
+
+        display: grid;
+    
+        grid-template-columns: repeat(1, 1fr);
+    
+        gap:  50px;
+    
+    }  
+
+    .maps__grid {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+@media (max-width: 400px) {
+    .maps__grid {
+        grid-template-columns: 1fr;
+
+        .googlemaps{
+            width: 200px;
+            height: 200px;
+        }
+        
+    }
+
+}
